@@ -18,7 +18,7 @@ resource "aws_lb_listener" "https_forward" {
   port              = "443"
   protocol          = "HTTPS"
   depends_on        = [aws_lb_target_group.quest]
-  certificate_arn   = "arn:aws:acm:us-east-1:191155221734:certificate/bbb3e017-a0f8-4ef0-862e-c91a3045dae3"
+  certificate_arn   = data.aws_acm_certificate.issued.arn
   #port     = 80
   #protocol = "HTTP"
 
