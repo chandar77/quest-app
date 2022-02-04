@@ -34,3 +34,4 @@
 - SSL certs are uploaded using awscli. As it is not a best practise to add SSL certs from terraform or use self signed certs. Ideally SSL certs from a provider should be added or request cert from AWS for your registered domain.
 - The design takes High Availability and Auto scaling into consideration. But for latency CDN can be used.
 - Best practices for terraform can be used. Can create custom resuable modules.
+- Local tf backend was used. Terraform cloud or s3 backends would be ideal.
